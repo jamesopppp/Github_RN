@@ -1,15 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
+import NavigationUtil from '../navigator/NavigationUtil';
 
-const WelcomePage = () => {
-  return (
-    <>
-      <View style={styles.containerr}>
-        <Text style={styles.welcome}>WelcomePage</Text>
+export default class WelcomePage extends Component {
+  componentDidMount() {
+    this.timer = setTimeout(() => {
+      NavigationUtil.resetToHomePage({
+        navigation: this.props.navigation,
+      });
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    this.timer && clearTimeout(this.timer);
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>WelcomePage123</Text>
       </View>
-    </>
-  );
-};
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -24,5 +37,3 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 });
-
-export default WelcomePage;
