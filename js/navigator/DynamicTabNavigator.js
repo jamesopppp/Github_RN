@@ -58,7 +58,7 @@ const TABS = {
 class DynamicTabNavigator extends Component {
   constructor(props) {
     super(props);
-    console.disableYellowBox = true;
+    // console.disableYellowBox = true;
   }
   _tabNavigator() {
     if (this.Tabs) {
