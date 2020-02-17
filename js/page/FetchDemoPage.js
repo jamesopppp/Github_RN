@@ -1,13 +1,13 @@
 import React from 'react';
-import {StyleSheet, View, Text, Button} from 'react-native';
-import {connect} from 'react-redux';
-import actions from '../action/index';
+import {StyleSheet, View, Text, Button, TextInput} from 'react-native';
+// import {connect} from 'react-redux';
+// import actions from '../action/index';
 
-class FetchDemoPage extends React.Component {
+export default class FetchDemoPage extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>FetchDemoPage</Text>
+        <Text style={styles.welcome}>Fetch Demo page</Text>
         <Button
           title={'改变主题色'}
           onPress={() => {
@@ -32,14 +32,3 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 });
-
-const mapStateToProps = state => ({});
-
-const mapDispatchToProps = dispatch => ({
-  onThemeChange: theme => dispatch(actions.onThemeChange(theme)),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(FetchDemoPage);
