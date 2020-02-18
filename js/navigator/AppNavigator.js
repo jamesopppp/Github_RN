@@ -3,6 +3,7 @@ import {createSwitchNavigator, createAppContainer} from 'react-navigation';
 import WelcomePage from '../page/WelcomePage';
 import HomePage from '../page/HomePage';
 import FetchDemoPage from '../page/FetchDemoPage';
+import AsyncStorageDemoPage from '../page/AsyncStorageDemoPage';
 import DetailPage from '../page/DetailPage';
 import {connect} from 'react-redux';
 import {
@@ -34,6 +35,10 @@ const MainNavigator = createStackNavigator({
   },
   FetchDemoPage: {
     screen: FetchDemoPage,
+    navigationOptions: {},
+  },
+  AsyncStorageDemoPage: {
+    screen: AsyncStorageDemoPage,
     navigationOptions: {},
   },
 });
