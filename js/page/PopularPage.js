@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import {connect} from 'react-redux';
 import actions from '../action/index';
+import PopularItem from '../common/PopularItem';
 
 const URL = 'https://api.github.com/search/repositories?q=';
 const QUERY_STR = '&sort=stars';
@@ -81,11 +82,7 @@ class PopularTab extends Component {
 
   renderItem(data) {
     const item = data.item;
-    return (
-      <View style={{marginBottom: 10}}>
-        <Text style={{backgroundColor: '#faa'}}>{JSON.stringify(item)}</Text>
-      </View>
-    );
+    return <PopularItem item={item} onSelect={() => {}} />;
   }
 
   render() {
@@ -137,14 +134,6 @@ const PopularTabPage = connect(
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
   },
   tabStyle: {
     minWidth: 50,
