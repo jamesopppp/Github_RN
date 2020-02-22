@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* Github_RNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Github_RNTests.m */; };
 		058CD78EF561458FA35041F8 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3A21B35C5B4315B1F0D706 /* FontAwesome5_Regular.ttf */; };
 		0C771AECDB3849C3B3BD75C5 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFE487A4921B4895A5496E2C /* EvilIcons.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -15,6 +14,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		18E28A5555E34807955F05D9 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A44197BEB9947E8AB6EBE53 /* Fontisto.ttf */; };
+		1A0B1E182400E15F00DBFC03 /* Github_RNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B1E172400E15F00DBFC03 /* Github_RNTests.swift */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -28,18 +28,18 @@
 		4C5CD8F4EC644027A02505E6 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A41CC380EDA474F8E4B3E2F /* Zocial.ttf */; };
 		5D7F73216A2F475992F06256 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 063A7F93B3374D80A1173B13 /* MaterialIcons.ttf */; };
 		74C5DBA7EE2444AEA9CCF8F4 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A7A6D81350437090335E1C /* Entypo.ttf */; };
+		86575162A4BADECDF62EC1DE /* libPods-Github_RNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E8CAECE14EAC2E5D775907 /* libPods-Github_RNTests.a */; };
 		9DC1034A3950430980AD6BAA /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BCABC83161A4943A640595B /* FontAwesome5_Solid.ttf */; };
 		A8A8F9927D35492D9FE43122 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87C0338B47DE402DB1212B9E /* FontAwesome5_Brands.ttf */; };
 		B97956BF545E480BAB9EA77E /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E22720B0521B40428B3B0675 /* MaterialCommunityIcons.ttf */; };
 		C72A86FE47294FD193FD0082 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E1054AE7E30480F97E5E741 /* Foundation.ttf */; };
-		CF9AFF5997187B36A286A17B /* libPods-Github_RNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E8CAECE14EAC2E5D775907 /* libPods-Github_RNTests.a */; };
 		DC4D3B94407A448F8B68E5A3 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8003015F764E20AA2547F0 /* Ionicons.ttf */; };
 		F9FE1613957C4BA88E07A659 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E29EA29F64A44EB68958DB71 /* Octicons.ttf */; };
 		FB54262A0253CC1353AF18BB /* libPods-Github_RN-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 852528F1705D97C613B4947D /* libPods-Github_RN-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+		1A0B1E1A2400E15F00DBFC03 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
@@ -57,7 +57,6 @@
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* Github_RNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Github_RNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* Github_RNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Github_RNTests.m; sourceTree = "<group>"; };
 		0455253AE152B27D95E3F503 /* Pods-Github_RNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github_RNTests.debug.xcconfig"; path = "Target Support Files/Pods-Github_RNTests/Pods-Github_RNTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +70,11 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Github_RN/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Github_RN/main.m; sourceTree = "<group>"; };
 		19D51FDABD5A039C3BD846A9 /* Pods-Github_RN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github_RN.release.xcconfig"; path = "Target Support Files/Pods-Github_RN/Pods-Github_RN.release.xcconfig"; sourceTree = "<group>"; };
+		1A0B1E092400E14500DBFC03 /* Github_RNUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_RNUITests.swift; sourceTree = "<group>"; };
+		1A0B1E0B2400E14500DBFC03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A0B1E152400E15F00DBFC03 /* Github_RNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Github_RNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0B1E172400E15F00DBFC03 /* Github_RNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_RNTests.swift; sourceTree = "<group>"; };
+		1A0B1E192400E15F00DBFC03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AEA75E523C45D4D00D41F25 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
 		1AEA75E623C45D4D00D41F25 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		1AEA75E723C45D4D00D41F25 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
@@ -118,19 +122,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF9AFF5997187B36A286A17B /* libPods-Github_RNTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4B445524B9B6F2D4BEAE3666 /* libPods-Github_RN.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0B1E122400E15F00DBFC03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86575162A4BADECDF62EC1DE /* libPods-Github_RNTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +186,24 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = Github_RN;
+			sourceTree = "<group>";
+		};
+		1A0B1E082400E14500DBFC03 /* Github_RNUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A0B1E092400E14500DBFC03 /* Github_RNUITests.swift */,
+				1A0B1E0B2400E14500DBFC03 /* Info.plist */,
+			);
+			path = Github_RNUITests;
+			sourceTree = "<group>";
+		};
+		1A0B1E162400E15F00DBFC03 /* Github_RNTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A0B1E172400E15F00DBFC03 /* Github_RNTests.swift */,
+				1A0B1E192400E15F00DBFC03 /* Info.plist */,
+			);
+			path = Github_RNTests;
 			sourceTree = "<group>";
 		};
 		1AEA75E423C45D4D00D41F25 /* Fonts */ = {
@@ -250,6 +272,8 @@
 				13B07FAE1A68108700A75B9A /* Github_RN */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* Github_RNTests */,
+				1A0B1E082400E14500DBFC03 /* Github_RNUITests */,
+				1A0B1E162400E15F00DBFC03 /* Github_RNTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				74EBEDFF7BA90D9B4F24556E /* Pods */,
@@ -264,9 +288,9 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* Github_RN.app */,
-				00E356EE1AD99517003FC87E /* Github_RNTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* Github_RN-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* Github_RN-tvOSTests.xctest */,
+				1A0B1E152400E15F00DBFC03 /* Github_RNTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,25 +321,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* Github_RNTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Github_RNTests" */;
-			buildPhases = (
-				2C5C4118FD3C547360D8716C /* [CP] Check Pods Manifest.lock */,
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
-			);
-			name = Github_RNTests;
-			productName = Github_RNTests;
-			productReference = 00E356EE1AD99517003FC87E /* Github_RNTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		13B07F861A680F5B00A75B9A /* Github_RN */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Github_RN" */;
@@ -336,6 +341,25 @@
 			productName = Github_RN;
 			productReference = 13B07F961A680F5B00A75B9A /* Github_RN.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1A0B1E142400E15F00DBFC03 /* Github_RNTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A0B1E1C2400E15F00DBFC03 /* Build configuration list for PBXNativeTarget "Github_RNTests" */;
+			buildPhases = (
+				9FEA3277A56591BA553F989D /* [CP] Check Pods Manifest.lock */,
+				1A0B1E112400E15F00DBFC03 /* Sources */,
+				1A0B1E122400E15F00DBFC03 /* Frameworks */,
+				1A0B1E132400E15F00DBFC03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A0B1E1B2400E15F00DBFC03 /* PBXTargetDependency */,
+			);
+			name = Github_RNTests;
+			productName = Github_RNTests;
+			productReference = 1A0B1E152400E15F00DBFC03 /* Github_RNTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2D02E47A1E0B4A5D006451C7 /* Github_RN-tvOS */ = {
 			isa = PBXNativeTarget;
@@ -382,28 +406,28 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = SF9YT7NYFK;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = SF9YT7NYFK;
 						ProvisioningStyle = Automatic;
 					};
-					2D02E47A1E0B4A5D006451C7 = {
-						CreatedOnToolsVersion = 8.2.1;
+					1A0B1E142400E15F00DBFC03 = {
+						CreatedOnToolsVersion = 11.3;
 						DevelopmentTeam = SF9YT7NYFK;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					2D02E47A1E0B4A5D006451C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Manual;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = SF9YT7NYFK;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
 					};
 				};
@@ -423,21 +447,14 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* Github_RN */,
-				00E356ED1AD99517003FC87E /* Github_RNTests */,
 				2D02E47A1E0B4A5D006451C7 /* Github_RN-tvOS */,
 				2D02E48F1E0B4A5D006451C7 /* Github_RN-tvOSTests */,
+				1A0B1E142400E15F00DBFC03 /* Github_RNTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -460,6 +477,13 @@
 				F9FE1613957C4BA88E07A659 /* Octicons.ttf in Resources */,
 				42BDCB93D325488D9267C935 /* SimpleLineIcons.ttf in Resources */,
 				4C5CD8F4EC644027A02505E6 /* Zocial.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0B1E132400E15F00DBFC03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,28 +518,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		2C5C4118FD3C547360D8716C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Github_RNTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -623,6 +625,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Github_RN/Pods-Github_RN-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9FEA3277A56591BA553F989D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Github_RNTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A138B43D406D1249002ABAEE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -686,20 +710,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00E356F31AD99517003FC87E /* Github_RNTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0B1E112400E15F00DBFC03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A0B1E182400E15F00DBFC03 /* Github_RNTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,10 +747,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+		1A0B1E1B2400E15F00DBFC03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 13B07F861A680F5B00A75B9A /* Github_RN */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+			targetProxy = 1A0B1E1A2400E15F00DBFC03 /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -748,61 +772,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0455253AE152B27D95E3F503 /* Pods-Github_RNTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SF9YT7NYFK;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Github_RNTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Github_RN.app/Github_RN";
-			};
-			name = Debug;
-		};
-		00E356F71AD99517003FC87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F678DF8F3D582C95E3AA975 /* Pods-Github_RNTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = SF9YT7NYFK;
-				INFOPLIST_FILE = Github_RNTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Github_RN.app/Github_RN";
-			};
-			name = Release;
-		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 720B313B8CEB6F2FAE030313 /* Pods-Github_RN.debug.xcconfig */;
@@ -815,12 +784,13 @@
 				DEVELOPMENT_TEAM = SF9YT7NYFK;
 				INFOPLIST_FILE = Github_RN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "example.Github-RN";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.james..Github-RN";
 				PRODUCT_NAME = Github_RN;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -838,15 +808,75 @@
 				DEVELOPMENT_TEAM = SF9YT7NYFK;
 				INFOPLIST_FILE = Github_RN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "example.Github-RN";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.james..Github-RN";
 				PRODUCT_NAME = Github_RN;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		1A0B1E1D2400E15F00DBFC03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0455253AE152B27D95E3F503 /* Pods-Github_RNTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = SF9YT7NYFK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Github_RNTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.james.Github-RNTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Github_RN.app/Github_RN";
+			};
+			name = Debug;
+		};
+		1A0B1E1E2400E15F00DBFC03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F678DF8F3D582C95E3AA975 /* Pods-Github_RNTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SF9YT7NYFK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Github_RNTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.james.Github-RNTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Github_RN.app/Github_RN";
 			};
 			name = Release;
 		};
@@ -860,8 +890,9 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = SF9YT7NYFK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Github_RN-tvOS/Info.plist";
@@ -873,6 +904,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Github_RN-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
@@ -889,9 +921,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = SF9YT7NYFK;
+				DEVELOPMENT_TEAM = "";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Github_RN-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -902,6 +935,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Github_RN-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
@@ -917,8 +951,9 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = SF9YT7NYFK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Github_RN-tvOSTests/Info.plist";
@@ -930,6 +965,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Github_RN-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Github_RN-tvOS.app/Github_RN-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
@@ -945,9 +981,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = SF9YT7NYFK;
+				DEVELOPMENT_TEAM = "";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Github_RN-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -958,6 +995,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Github_RN-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Github_RN-tvOS.app/Github_RN-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
@@ -1066,20 +1104,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Github_RNTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Github_RN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A0B1E1C2400E15F00DBFC03 /* Build configuration list for PBXNativeTarget "Github_RNTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0B1E1D2400E15F00DBFC03 /* Debug */,
+				1A0B1E1E2400E15F00DBFC03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
