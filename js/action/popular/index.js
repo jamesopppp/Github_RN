@@ -87,6 +87,7 @@ function handleData(dispatch, storeName, data, pageSize) {
   }
   dispatch({
     type: Types.POPULAR_REFRESH_SUCCESS,
+    items: fixItems,
     projectModes:
       pageSize > fixItems.length ? fixItems : fixItems.slice(0, pageSize),
     storeName,
