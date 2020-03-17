@@ -3,6 +3,7 @@ import {StyleSheet, View, Text, Button} from 'react-native';
 import {connect} from 'react-redux';
 import actions from '../action/index';
 import NavigationUtil from '../navigator/NavigationUtil';
+// import NavigationBar from '../common/NavigationBar';
 
 class MyPage extends React.Component {
   render() {
