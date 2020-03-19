@@ -10,6 +10,7 @@ import {
   FlatList,
   Text,
   RefreshControl,
+  DeviceEventEmitter,
 } from 'react-native';
 import {connect} from 'react-redux';
 import actions from '../action/index';
@@ -19,14 +20,13 @@ import NavigationBar from '../common/NavigationBar';
 import TrendingDialog, {TimeSpans} from '../common/TrendingDialog';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
+const EVENT_TYPE_TIME_SPAN_CHANGE = 'EVENT_TYPE_TIME_SPAN_CHANGE';
 const URL = 'https://github.com/trending/';
 const THEME_COLOR = '#678';
 
 export default class TrendingPage extends Component {
   constructor(props) {
     super(props);
-
-    console.log(TimeSpans);
     this.tabNames = ['All', 'JavaScript', 'Python', 'Dart', 'Java', 'PHP'];
     this.state = {
       timeSpan: TimeSpans[0],
@@ -79,6 +79,7 @@ export default class TrendingPage extends Component {
     this.setState({
       timeSpan: tab,
     });
+    DeviceEventEmitter.emit(EVENT_TYPE_TIME_SPAN_CHANGE, tab);
   }
 
   renderTrendingDialog() {
@@ -88,6 +89,27 @@ export default class TrendingPage extends Component {
         onSelect={tab => this.onSelectTimeSpan(tab)}
       />
     );
+  }
+
+  _tabNav() {
+    if (!this.tabNav) {
+      //优化效率：根据需要选择是否重新创建TabNavigator,通常Tab改变后才重新创建
+      this.tabNav = createAppContainer(
+        createMaterialTopTabNavigator(this._genTabs(), {
+          tabBarOptions: {
+            tabStyle: styles.tabStyle,
+            upperCaseLabel: false,
+            scrollEnabled: true,
+            style: {
+              backgroundColor: '#678',
+            },
+            indicatorStyle: styles.indicatorStyle,
+            labelStyle: styles.labelStyle,
+          },
+        }),
+      );
+    }
+    return this.tabNav;
   }
 
   render() {
@@ -103,20 +125,7 @@ export default class TrendingPage extends Component {
         style={{backgroundColor: THEME_COLOR}}
       />
     );
-    const TabNavigator = createAppContainer(
-      createMaterialTopTabNavigator(this._genTabs(), {
-        tabBarOptions: {
-          tabStyle: styles.tabStyle,
-          upperCaseLabel: false,
-          scrollEnabled: true,
-          style: {
-            backgroundColor: '#678',
-          },
-          indicatorStyle: styles.indicatorStyle,
-          labelStyle: styles.labelStyle,
-        },
-      }),
-    );
+    const TabNavigator = this._tabNav();
     return (
       <View style={{flex: 1, backgroundColor: '#fff'}}>
         {navigationBar}
@@ -138,6 +147,19 @@ class TrendingTab extends Component {
 
   componentDidMount() {
     this.loadData();
+    this.timeSpanChangeListener = DeviceEventEmitter.addListener(
+      EVENT_TYPE_TIME_SPAN_CHANGE,
+      timeSpan => {
+        this.timeSpan = timeSpan;
+        this.loadData();
+      },
+    );
+  }
+
+  componentWillUnmount() {
+    if (this.timeSpanChangeListener) {
+      this.timeSpanChangeListener.remove();
+    }
   }
 
   loadData(loadMore) {

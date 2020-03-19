@@ -54,6 +54,7 @@ export default class TrendingDialog extends Component {
             {TimeSpans.map((result, i, arr) => {
               return (
                 <TouchableOpacity
+                  key={i}
                   underlayColor="transparent"
                   onPress={() => onSelect(arr[i])}>
                   <View style={styles.text_container}>
