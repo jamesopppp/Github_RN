@@ -8,7 +8,6 @@ import MyPage from '../page/MyPage';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
-import NavigationUtil from '../navigator/NavigationUtil';
 import {connect} from 'react-redux';
 
 // 配置页面路由
