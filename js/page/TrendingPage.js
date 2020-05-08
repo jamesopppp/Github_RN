@@ -19,6 +19,7 @@ import Toast from 'react-native-easy-toast';
 import NavigationBar from '../common/NavigationBar';
 import TrendingDialog, {TimeSpans} from '../common/TrendingDialog';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import NavigationUtil from '../navigator/NavigationUtil';
 
 const EVENT_TYPE_TIME_SPAN_CHANGE = 'EVENT_TYPE_TIME_SPAN_CHANGE';
 const URL = 'https://github.com/trending/';
@@ -210,7 +211,19 @@ class TrendingTab extends Component {
 
   renderItem(data) {
     const item = data.item;
-    return <TrendingItem item={item} onSelect={() => {}} />;
+    return (
+      <TrendingItem
+        item={item}
+        onSelect={() => {
+          NavigationUtil.goPage(
+            {
+              projectModel: item,
+            },
+            'DetailPage',
+          );
+        }}
+      />
+    );
   }
 
   genIndicator() {
