@@ -20,6 +20,11 @@ export default class FavoriteDao {
     });
   }
 
+  /**
+   * 更新Favorite key集合
+   * @param {string} key
+   * @param {boolean} isAdd true 添加，false 删除
+   */
   updateFavoriteKeys(key, isAdd) {
     AsyncStorage.getItem(this.favoriteKey, (error, result) => {
       if (!error) {
@@ -42,5 +47,41 @@ export default class FavoriteDao {
         AsyncStorage.setItem(this.favoriteKey, JSON.stringify(favoriteKeys));
       }
     });
+  }
+
+  /**
+   * 获取收藏的Repository对应的key
+   * @return {Promise}
+   */
+  getFavoriteKeys() {
+    return new Promise((resolve, reject) => {
+      AsyncStorage.getItem(this.favoriteKey, (error, result) => {
+        if (!error) {
+          try {
+            resolve(JSON.parse(result));
+          } catch (e) {
+            reject(error);
+          }
+        } else {
+          reject(error);
+        }
+      });
+    });
+  }
+
+  /**
+   * 取消收藏，移除已经收藏的项目
+   * @param {string} key 项目id
+   */
+  removeFavoriteItem(key) {
+    AsyncStorage.removeItem(key, (error, result) => {
+      if (!error) {
+        this.updateFavoriteKeys(key, false);
+      }
+    });
+  }
+
+  getAllItems() {
+    return new Promise((resolve, reject) => {});
   }
 }
