@@ -7,9 +7,10 @@ import {handleData} from '../ActionUtil';
  * @param storeName
  * @param url
  * @param pageSize
+ * @param favoriteDao
  * @returns {function(*)}
  */
-export function onRefreshPopular(storeName, url, pageSize) {
+export function onRefreshPopular(storeName, url, pageSize, favoriteDao) {
   return dispatch => {
     dispatch({type: Types.POPULAR_REFRESH, storeName});
     let dataStore = new DataStore();
@@ -22,6 +23,7 @@ export function onRefreshPopular(storeName, url, pageSize) {
           storeName,
           data,
           pageSize,
+          favoriteDao,
         );
       })
       .catch(error => {
@@ -37,6 +39,7 @@ export function onRefreshPopular(storeName, url, pageSize) {
  * @param pageIndex 第几页
  * @param pageSize 每页显示条数
  * @param dataArray 原始数据
+ * @param favoriteDao
  * @param callBack 回调函数，可以通过回调函数来向调用页面通信：比如异常信息的展示，没有更多的等待
  * @returns {function(*)}
  */
@@ -60,7 +63,6 @@ export function onLoadMorePopular(
           error: 'no more',
           storeName: storeName,
           pageIndex: --pageIndex,
-          projectModes: dataArray,
         });
       } else {
         // 本次和载入的最大数量
