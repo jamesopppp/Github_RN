@@ -33,7 +33,7 @@ export function handleData(
     dispatch({
       type: actionType,
       items: fixItems,
-      projectModes: projectModels,
+      projectModels: projectModels,
       storeName,
       pageIndex: 1,
     });

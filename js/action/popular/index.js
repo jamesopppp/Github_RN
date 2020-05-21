@@ -1,6 +1,6 @@
 import Types from '../types';
 import DataStore, {FLAG_STORAGE} from '../../expand/dao/DataStore';
-import {handleData} from '../ActionUtil';
+import {handleData, _projectModels} from '../ActionUtil';
 
 /**
  * 获取最热数据的异步action
@@ -39,8 +39,8 @@ export function onRefreshPopular(storeName, url, pageSize, favoriteDao) {
  * @param pageIndex 第几页
  * @param pageSize 每页显示条数
  * @param dataArray 原始数据
- * @param favoriteDao
  * @param callBack 回调函数，可以通过回调函数来向调用页面通信：比如异常信息的展示，没有更多的等待
+ * @param favoriteDao
  * @returns {function(*)}
  */
 export function onLoadMorePopular(
@@ -48,6 +48,7 @@ export function onLoadMorePopular(
   pageIndex,
   pageSize,
   dataArray = [],
+  favoriteDao,
   callBack,
 ) {
   return dispatch => {
@@ -70,11 +71,13 @@ export function onLoadMorePopular(
           pageSize * pageIndex > dataArray.length
             ? dataArray.length
             : pageSize * pageIndex;
-        dispatch({
-          type: Types.POPULAR_LOAD_MORE_SUCCESS,
-          storeName,
-          pageIndex,
-          projectModes: dataArray.slice(0, max),
+        _projectModels(dataArray.slice(0, max), favoriteDao, data => {
+          dispatch({
+            type: Types.POPULAR_LOAD_MORE_SUCCESS,
+            storeName,
+            pageIndex,
+            projectModels: data,
+          });
         });
       }
     }, 500);
