@@ -20,10 +20,15 @@ import NavigationBar from '../common/NavigationBar';
 import TrendingDialog, {TimeSpans} from '../common/TrendingDialog';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import NavigationUtil from '../navigator/NavigationUtil';
+import {FLAG_STORAGE} from '../expand/dao/DataStore';
+import FavoriteDao from '../expand/dao/FavoriteDao';
+import FavoriteUtil from '../util/FavoriteUtil';
 
 const EVENT_TYPE_TIME_SPAN_CHANGE = 'EVENT_TYPE_TIME_SPAN_CHANGE';
 const URL = 'https://github.com/trending/';
 const THEME_COLOR = '#678';
+
+const favoriteDao = new FavoriteDao(FLAG_STORAGE.flag_trending);
 
 export default class TrendingPage extends Component {
   constructor(props) {
@@ -173,12 +178,13 @@ class TrendingTab extends Component {
         ++store.pageIndex,
         pageSize,
         store.items,
+        favoriteDao,
         callBack => {
           this.refs.toast.show('没有更多了');
         },
       );
     } else {
-      onRefreshTrending(this.storeName, url, pageSize);
+      onRefreshTrending(this.storeName, url, pageSize, favoriteDao);
     }
   }
 
@@ -213,13 +219,21 @@ class TrendingTab extends Component {
     const item = data.item;
     return (
       <TrendingItem
-        item={item}
+        projectModel={item}
         onSelect={() => {
           NavigationUtil.goPage(
             {
               projectModel: item,
             },
             'DetailPage',
+          );
+        }}
+        onFavorite={(item, isFavorite) => {
+          FavoriteUtil.onFavorite(
+            favoriteDao,
+            item,
+            isFavorite,
+            FLAG_STORAGE.flag_trending,
           );
         }}
       />
@@ -242,7 +256,7 @@ class TrendingTab extends Component {
         <FlatList
           data={store.projectModels}
           renderItem={data => this.renderItem(data)}
-          keyExtractor={item => '' + (item.id || item.fullName)}
+          keyExtractor={data => '' + (data.item.id || data.item.fullName)}
           refreshControl={
             <RefreshControl
               title={'Loading'}
@@ -278,16 +292,24 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onRefreshTrending: (storeName, url, pageSize) => {
-    dispatch(actions.onRefreshTrending(storeName, url, pageSize));
+  onRefreshTrending: (storeName, url, pageSize, favoriteDao) => {
+    dispatch(actions.onRefreshTrending(storeName, url, pageSize, favoriteDao));
   },
-  onLoadMoreTrending: (storeName, pageIndex, pageSize, items, callBack) => {
+  onLoadMoreTrending: (
+    storeName,
+    pageIndex,
+    pageSize,
+    items,
+    favoriteDao,
+    callBack,
+  ) => {
     dispatch(
       actions.onLoadMoreTrending(
         storeName,
         pageIndex,
         pageSize,
         items,
+        favoriteDao,
         callBack,
       ),
     );

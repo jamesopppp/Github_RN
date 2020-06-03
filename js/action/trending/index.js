@@ -1,15 +1,16 @@
 import Types from '../types';
 import DataStore, {FLAG_STORAGE} from '../../expand/dao/DataStore';
-import {handleData} from '../ActionUtil';
+import {handleData, _projectModels} from '../ActionUtil';
 
 /**
  * 获取最热数据的异步action
  * @param storeName
  * @param url
  * @param pageSize
+ * @param favoriteDao
  * @returns {function(*)}
  */
-export function onRefreshTrending(storeName, url, pageSize) {
+export function onRefreshTrending(storeName, url, pageSize, favoriteDao) {
   return dispatch => {
     dispatch({type: Types.TRENDING_REFRESH, storeName});
     let dataStore = new DataStore();
@@ -22,6 +23,7 @@ export function onRefreshTrending(storeName, url, pageSize) {
           storeName,
           data,
           pageSize,
+          favoriteDao,
         );
       })
       .catch(error => {
@@ -38,6 +40,7 @@ export function onRefreshTrending(storeName, url, pageSize) {
  * @param pageSize 每页显示条数
  * @param dataArray 原始数据
  * @param callBack 回调函数，可以通过回调函数来向调用页面通信：比如异常信息的展示，没有更多的等待
+ * @param favoriteDao
  * @returns {function(*)}
  */
 export function onLoadMoreTrending(
@@ -45,6 +48,7 @@ export function onLoadMoreTrending(
   pageIndex,
   pageSize,
   dataArray = [],
+  favoriteDao,
   callBack,
 ) {
   return dispatch => {
@@ -68,11 +72,13 @@ export function onLoadMoreTrending(
           pageSize * pageIndex > dataArray.length
             ? dataArray.length
             : pageSize * pageIndex;
-        dispatch({
-          type: Types.TRENDING_LOAD_MORE_SUCCESS,
-          storeName,
-          pageIndex,
-          projectModels: dataArray.slice(0, max),
+        _projectModels(dataArray.slice(0, max), favoriteDao, data => {
+          dispatch({
+            type: Types.TRENDING_LOAD_MORE_SUCCESS,
+            storeName,
+            pageIndex,
+            projectModels: data,
+          });
         });
       }
     }, 500);
