@@ -139,10 +139,12 @@ class PopularTab extends Component {
     return (
       <PopularItem
         projectModel={item}
-        onSelect={() => {
+        onSelect={callback => {
           NavigationUtil.goPage(
             {
               projectModel: item,
+              flag: FLAG_STORAGE.flag_popular,
+              callback,
             },
             'DetailPage',
           );
