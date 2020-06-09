@@ -9,6 +9,7 @@ import {
   FlatList,
   Text,
   RefreshControl,
+  DeviceEventEmitter,
 } from 'react-native';
 import {connect} from 'react-redux';
 import actions from '../action/index';
@@ -19,6 +20,7 @@ import NavigationUtil from '../navigator/NavigationUtil';
 import {FLAG_STORAGE} from '../expand/dao/DataStore';
 import FavoriteDao from '../expand/dao/FavoriteDao';
 import FavoriteUtil from '../util/FavoriteUtil';
+import EventTypes from '../util/EventTypes';
 
 const URL = 'https://api.github.com/search/repositories?q=';
 const QUERY_STR = '&sort=stars';
@@ -85,13 +87,37 @@ class PopularTab extends Component {
     super(props);
     const {tabLabel} = this.props;
     this.storeName = tabLabel;
+    this.isFavoriteChanged = false;
   }
 
   componentDidMount() {
     this.loadData();
+    this.favoriteChangeListener = DeviceEventEmitter.addListener(
+      EventTypes.favorite_changed_popular,
+      () => {
+        this.isFavoriteChanged = true;
+      },
+    );
+    this.bottomTabSelectListener = DeviceEventEmitter.addListener(
+      EventTypes.bottom_tab_select,
+      data => {
+        if (data.to === 0 && this.isFavoriteChanged) {
+          this.loadData(null, true);
+        }
+      },
+    );
   }
 
-  loadData(loadMore) {
+  componentWillUnmount() {
+    if (this.favoriteChangeListener) {
+      this.favoriteChangeListener.remove();
+    }
+    if (this.bottomTabSelectListener) {
+      this.bottomTabSelectListener.remove();
+    }
+  }
+
+  loadData(loadMore, refreshFavorite) {
     const {onRefreshPopular, onLoadMorePopular} = this.props;
     const store = this._store();
     const url = this.genFetchUrl(this.storeName);

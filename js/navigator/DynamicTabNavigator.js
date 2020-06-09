@@ -9,6 +9,8 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {connect} from 'react-redux';
+import {DeviceEventEmitter} from 'react-native';
+import EventTypes from '../util/EventTypes';
 
 // 配置页面路由
 const TABS = {
@@ -63,10 +65,8 @@ class DynamicTabNavigator extends Component {
     if (this.Tabs) {
       return this.Tabs;
     }
-    const {PopularPage, TrendingPage, FavoritePage, MyPage} = TABS;
-    const tabs = {PopularPage, TrendingPage, FavoritePage, MyPage};
     return (this.Tabs = createAppContainer(
-      createBottomTabNavigator(tabs, {
+      createBottomTabNavigator(TABS, {
         tabBarComponent: props => (
           <TabBarComponent theme={this.props.theme} {...props} />
         ),
@@ -76,7 +76,16 @@ class DynamicTabNavigator extends Component {
 
   render() {
     const Tab = this._tabNavigator();
-    return <Tab />;
+    return (
+      <Tab
+        onNavigationStateChange={(prevState, newState, action) => {
+          DeviceEventEmitter.emit(EventTypes.bottom_tab_select, {
+            from: prevState.index,
+            to: newState.index,
+          });
+        }}
+      />
+    );
   }
 }
 
