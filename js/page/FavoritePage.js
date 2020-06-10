@@ -140,7 +140,12 @@ class FavoriteTab extends Component {
   }
 
   onFavorite(item, isFavorite) {
-    FavoriteUtil.onFavorite(this.favoriteDao, isFavorite, this.props.flag);
+    FavoriteUtil.onFavorite(
+      this.favoriteDao,
+      item,
+      isFavorite,
+      this.props.flag,
+    );
     if (this.storeName === FLAG_STORAGE.flag_popular) {
       DeviceEventEmitter.emit(EventTypes.favorite_changed_popular);
     } else {

@@ -118,7 +118,11 @@ class PopularTab extends Component {
   }
 
   loadData(loadMore, refreshFavorite) {
-    const {onRefreshPopular, onLoadMorePopular} = this.props;
+    const {
+      onRefreshPopular,
+      onLoadMorePopular,
+      onFlushPopularFavorite,
+    } = this.props;
     const store = this._store();
     const url = this.genFetchUrl(this.storeName);
     if (loadMore) {
@@ -131,6 +135,14 @@ class PopularTab extends Component {
         callBack => {
           this.refs.toast.show('没有更多了');
         },
+      );
+    } else if (refreshFavorite) {
+      onFlushPopularFavorite(
+        this.storeName,
+        store.pageIndex,
+        pageSize,
+        store.items,
+        favoriteDao,
       );
     } else {
       onRefreshPopular(this.storeName, url, pageSize, favoriteDao);
@@ -258,6 +270,23 @@ const mapDispatchToProps = dispatch => ({
         items,
         favoriteDao,
         callBack,
+      ),
+    );
+  },
+  onFlushPopularFavorite: (
+    storeName,
+    pageIndex,
+    pageSize,
+    items,
+    favoriteDao,
+  ) => {
+    dispatch(
+      actions.onFlushPopularFavorite(
+        storeName,
+        pageIndex,
+        pageSize,
+        items,
+        favoriteDao,
       ),
     );
   },

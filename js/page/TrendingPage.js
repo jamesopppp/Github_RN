@@ -23,6 +23,7 @@ import NavigationUtil from '../navigator/NavigationUtil';
 import {FLAG_STORAGE} from '../expand/dao/DataStore';
 import FavoriteDao from '../expand/dao/FavoriteDao';
 import FavoriteUtil from '../util/FavoriteUtil';
+import EventTypes from '../util/EventTypes';
 
 const EVENT_TYPE_TIME_SPAN_CHANGE = 'EVENT_TYPE_TIME_SPAN_CHANGE';
 const URL = 'https://github.com/trending/';
@@ -160,16 +161,40 @@ class TrendingTab extends Component {
         this.loadData();
       },
     );
+    this.favoriteChangeListener = DeviceEventEmitter.addListener(
+      EventTypes.favorite_changed_trending,
+      () => {
+        this.isFavoriteChanged = true;
+      },
+    );
+    this.bottomTabSelectListener = DeviceEventEmitter.addListener(
+      EventTypes.bottom_tab_select,
+      data => {
+        if (data.to === 1 && this.isFavoriteChanged) {
+          this.loadData(null, true);
+        }
+      },
+    );
   }
 
   componentWillUnmount() {
     if (this.timeSpanChangeListener) {
       this.timeSpanChangeListener.remove();
     }
+    if (this.favoriteChangeListener) {
+      this.favoriteChangeListener.remove();
+    }
+    if (this.bottomTabSelectListener) {
+      this.bottomTabSelectListener.remove();
+    }
   }
 
-  loadData(loadMore) {
-    const {onRefreshTrending, onLoadMoreTrending} = this.props;
+  loadData(loadMore, refreshFavorite) {
+    const {
+      onRefreshTrending,
+      onLoadMoreTrending,
+      onFlushTrendingFavorite,
+    } = this.props;
     const store = this._store();
     const url = this.genFetchUrl(this.storeName);
     if (loadMore) {
@@ -182,6 +207,14 @@ class TrendingTab extends Component {
         callBack => {
           this.refs.toast.show('没有更多了');
         },
+      );
+    } else if (refreshFavorite) {
+      onFlushTrendingFavorite(
+        this.storeName,
+        store.pageIndex,
+        pageSize,
+        store.items,
+        favoriteDao,
       );
     } else {
       onRefreshTrending(this.storeName, url, pageSize, favoriteDao);
@@ -314,6 +347,21 @@ const mapDispatchToProps = dispatch => ({
         favoriteDao,
         callBack,
       ),
+    );
+  },
+  onFlushTrendingFavorite: (
+    storeName,
+    pageIndex,
+    pageSize,
+    items,
+    favoriteDao,
+  ) => {
+    actions.onFlushTrendingFavorite(
+      storeName,
+      pageIndex,
+      pageSize,
+      items,
+      favoriteDao,
     );
   },
 });
