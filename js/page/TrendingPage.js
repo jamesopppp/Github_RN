@@ -209,6 +209,7 @@ class TrendingTab extends Component {
         },
       );
     } else if (refreshFavorite) {
+      alert(this.storeName);
       onFlushTrendingFavorite(
         this.storeName,
         store.pageIndex,
@@ -356,12 +357,14 @@ const mapDispatchToProps = dispatch => ({
     items,
     favoriteDao,
   ) => {
-    actions.onFlushTrendingFavorite(
-      storeName,
-      pageIndex,
-      pageSize,
-      items,
-      favoriteDao,
+    dispatch(
+      actions.onFlushTrendingFavorite(
+        storeName,
+        pageIndex,
+        pageSize,
+        items,
+        favoriteDao,
+      ),
     );
   },
 });

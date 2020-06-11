@@ -74,6 +74,7 @@ export default function onAction(state = defaultState, action) {
         [action.storeName]: {
           ...state[action.storeName],
           projectModels: action.projectModels,
+          pageIndex: action.pageIndex,
         },
       };
     default:

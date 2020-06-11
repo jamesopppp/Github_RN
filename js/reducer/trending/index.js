@@ -53,7 +53,6 @@ export default function onAction(state = defaultState, action) {
         },
       };
     case Types.FLUSH_TRENDING_FAVORITE: // 刷新收藏状态
-      alert('123');
       return {
         ...state,
         [action.storeName]: {
