@@ -45,7 +45,7 @@ export const MORE_MENU = {
     icon: 'logo-github',
   },
   Tutorial: {
-    name: '教程',
+    name: 'bilibili',
     Icons: Ionicons,
     icon: 'ios-bookmarks',
   },

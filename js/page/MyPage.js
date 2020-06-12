@@ -9,46 +9,29 @@ import {
 import {connect} from 'react-redux';
 import actions from '../action/index';
 import NavigationBar from '../common/NavigationBar';
-import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {MORE_MENU} from '../common/MORE_MENU';
-import GlobalStyles from '../res/GlobalStyles';
+import GlobalStyles from '../res/styles/GlobalStyles';
 import ViewUtil from '../util/ViewUtil';
 import NavigationUtil from '../navigator/NavigationUtil';
 
 const THEME_COLOR = '#678';
 
 class MyPage extends React.Component {
-  getRightButton() {
-    return (
-      <View style={{flexDirection: 'row'}}>
-        <TouchableOpacity onPress={() => {}}>
-          <View style={{padding: 5, marginRight: 8}}>
-            <Feather name={'search'} size={24} style={{color: 'white'}} />
-          </View>
-        </TouchableOpacity>
-      </View>
-    );
-  }
-
-  getLeftButton(callback) {
-    return (
-      <TouchableOpacity
-        style={{padding: 8, paddingLeft: 12}}
-        onPress={callback}>
-        <Ionicons name={'ios-arrow-back'} size={26} style={{color: 'white'}} />
-      </TouchableOpacity>
-    );
-  }
-
   onClick(menu) {
     let RouteName,
       params = {};
     switch (menu) {
       case MORE_MENU.Tutorial:
         RouteName = 'WebViewPage';
-        params.title = '教程';
-        params.url = 'https://coding.m.imooc.com/classindex.html?cid=89';
+        params.title = '子贤的个人空间';
+        params.url = 'https://space.bilibili.com/29431540';
+        break;
+      case MORE_MENU.About:
+        RouteName = 'AboutPage';
+        break;
+      case MORE_MENU.About_Author:
+        RouteName = 'AboutMePage';
         break;
     }
     if (RouteName) {
@@ -61,18 +44,8 @@ class MyPage extends React.Component {
   }
 
   render() {
-    let statusBar = {
-      backgroundColor: THEME_COLOR,
-      barStyle: 'light-content',
-    };
     let navigationBar = (
-      <NavigationBar
-        title={'我的'}
-        statusBar={statusBar}
-        style={{backgroundColor: THEME_COLOR}}
-        rightButton={this.getRightButton()}
-        leftButton={this.getLeftButton()}
-      />
+      <NavigationBar title={'我的'} style={{backgroundColor: THEME_COLOR}} />
     );
 
     return (

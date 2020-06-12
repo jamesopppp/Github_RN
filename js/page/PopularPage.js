@@ -27,7 +27,7 @@ const QUERY_STR = '&sort=stars';
 const THEME_COLOR = '#678';
 const favoriteDao = new FavoriteDao(FLAG_STORAGE.flag_popular);
 
-export default class PopularPage extends Component {
+class PopularPage extends Component {
   constructor(props) {
     super(props);
     this.tabNames = ['Java', 'Android', 'IOS', 'React', 'React Native', 'PHP'];
@@ -80,6 +80,19 @@ export default class PopularPage extends Component {
     );
   }
 }
+
+const mapPopularStateToProps = state => ({
+  keys: state.language.keys,
+});
+
+const mapPopularDispatchToProps = dispatch => ({
+  onLoadLanguage: flag => dispatch(actions.onLoadLanguage(flag)),
+});
+
+export default connect(
+  mapPopularStateToProps,
+  mapPopularDispatchToProps,
+)(PopularPage);
 
 const pageSize = 10; //设为常量，防止修改
 class PopularTab extends Component {

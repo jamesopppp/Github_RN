@@ -52,8 +52,13 @@ export default class DetailPage extends Component {
   }
 
   render() {
+    let statusBar = {
+      backgroundColor: THEME_COLOR,
+      barStyle: 'light-content',
+    };
     let navigationBar = (
       <NavigationBar
+        statusBar={statusBar}
         title={this.state.title}
         style={{backgroundColor: THEME_COLOR}}
         leftButton={ViewUtil.getLeftBackButton(() => this.onBackPress())}

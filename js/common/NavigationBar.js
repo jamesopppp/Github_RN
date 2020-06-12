@@ -33,6 +33,14 @@ export default class NavigationBar extends Component {
     leftButton: PropTypes.element,
   };
 
+  // 设置默认属性
+  static defaultProps = {
+    statusBar: {
+      barStyle: 'light-content',
+      hidden: false,
+    },
+  };
+
   render() {
     let statusBar = !this.props.statusBar.hidden ? (
       <View style={styles.statusBar}>
